@@ -14,7 +14,6 @@ bool CollisionDetector::RaySegmentIntersection(glm::vec2 ray_origin, glm::vec2 r
 	float dot = glm::dot(v2, v3);
 	if (abs(dot) < 0.001f) return false;
 
-	//float t1 = glm::cross(v2, v1) / dot;
 	float t1 = (v2.x * v1.y - v2.y * v1.x) / dot;
 	float t2 = glm::dot(v1, v3) / dot;
 

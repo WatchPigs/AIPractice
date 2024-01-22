@@ -1,5 +1,4 @@
 #include "ofApp.h"
-#include "Utils.h"
 #include "DrawString.h"
 
 void ofApp::CleanUp()

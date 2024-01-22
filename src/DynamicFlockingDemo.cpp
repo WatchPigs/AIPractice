@@ -50,13 +50,6 @@ void DynamicFlockingDemo::Setup()
 		}
 		targets.erase(self);
 
-		//void DynamicFlocking::NewRequest(Rigidbody * character, std::vector<Rigidbody*> targets,
-		//	float separation_threshold, float separation_decay_coefficient, float separation_max_acceleration,
-		//	float align_max_angular_acceleration, float align_max_rotation, float align_target_radius, float align_slow_radius, float align_time_to_target,
-		//	float velocity_match_max_acceleration, float velocity_match_time_to_target,
-		//	float arrive_max_acceleration, float arrive_max_speed, float arrive_target_radius, float arrive_slow_radius, float arrive_time_to_target,
-		//	float dynamic_separation_weight, float dynamic_align_weight, float dynamic_velocity_match_weight, float dynamic_arrive_weight,
-		//	float max_acceleration, float max_angular_acceleration);
 		dynamic_flockings_.back()->NewRequest(character_follower_boid->rigidbody_, targets,
 			64.0f, 2048.f, 2048.0f,
 			ofDegToRad(90.0f), ofDegToRad(45.0f), ofDegToRad(2.0f), ofDegToRad(30.0f), 0.1f,
