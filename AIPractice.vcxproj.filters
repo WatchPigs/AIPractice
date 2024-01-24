@@ -7,12 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Boid.cpp">
-      <Filter>src\Movement\source</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CollisionDetector.cpp">
-      <Filter>src\Movement\source</Filter>
-    </ClCompile>
     <ClCompile Include="src\DynamicAlign.cpp">
       <Filter>src\Movement\source</Filter>
     </ClCompile>
@@ -47,9 +41,6 @@
       <Filter>src\Movement\source</Filter>
     </ClCompile>
     <ClCompile Include="src\KinematicArrive.cpp">
-      <Filter>src\Movement\source</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Rigidbody.cpp">
       <Filter>src\Movement\source</Filter>
     </ClCompile>
     <ClCompile Include="src\Graph.cpp">
@@ -118,6 +109,24 @@
     <ClCompile Include="src\AStarThread.cpp">
       <Filter>src\Utils\source</Filter>
     </ClCompile>
+    <ClCompile Include="src\CollisionDetector.cpp">
+      <Filter>src\Utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Boid.cpp">
+      <Filter>src\Utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rigidbody.cpp">
+      <Filter>src\Utils\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DynamicFollowPath.cpp">
+      <Filter>src\Movement\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DynamicFollowPathDemo.cpp">
+      <Filter>src\Demos\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Path.cpp">
+      <Filter>src\Utils\source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -164,12 +173,6 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Boid.h">
-      <Filter>src\Movement\header</Filter>
-    </ClInclude>
-    <ClInclude Include="src\CollisionDetector.h">
-      <Filter>src\Movement\header</Filter>
-    </ClInclude>
     <ClInclude Include="src\DynamicAlign.h">
       <Filter>src\Movement\header</Filter>
     </ClInclude>
@@ -207,9 +210,6 @@
       <Filter>src\Movement\header</Filter>
     </ClInclude>
     <ClInclude Include="src\KinematicArrive.h">
-      <Filter>src\Movement\header</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Rigidbody.h">
       <Filter>src\Movement\header</Filter>
     </ClInclude>
     <ClInclude Include="src\KinematicSteeringOutput.h">
@@ -282,6 +282,24 @@
       <Filter>src\Utils\header</Filter>
     </ClInclude>
     <ClInclude Include="src\AStarThread.h">
+      <Filter>src\Utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CollisionDetector.h">
+      <Filter>src\Utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Boid.h">
+      <Filter>src\Utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rigidbody.h">
+      <Filter>src\Utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DynamicFollowPath.h">
+      <Filter>src\Movement\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DynamicFollowPathDemo.h">
+      <Filter>src\Demos\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Path.h">
       <Filter>src\Utils\header</Filter>
     </ClInclude>
   </ItemGroup>

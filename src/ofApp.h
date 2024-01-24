@@ -8,6 +8,7 @@
 #include "DynamicFaceDemo.h"
 #include "DynamicWanderDemo.h"
 #include "DynamicFlockingDemo.h"
+#include "DynamicFollowPathDemo.h"
 #include "PathfindingDijkstraDemo.h"
 #include "PathfindingAStarDemo.h"
 
@@ -15,7 +16,7 @@ class ofApp : public ofBaseApp{
 
 	public:
 
-		string main_menu_string_ = "Press numbers to choose:\n[Physics & Movement & Steering Behaviors]\n1: Kinematic Arrive Demo\n2: Dynamic Arrive VS Seek Demo\n3: Dynamic Pursue VS Seek Demo\n4: Dynamic Face Demo\n5: Dynamic Wander Demo\n6: Dynamic Flocking Demo\n[Pathfinding]\n7: Pathfinding Dijkstra Demo\n8: Pathfinding AStar Demo";
+		string main_menu_string_ = "Press numbers to choose:\n[Physics & Movement & Steering Behaviors]\n1: Kinematic Arrive Demo\n2: Dynamic Arrive VS Seek Demo\n3: Dynamic Pursue VS Seek Demo\n4: Dynamic Face Demo\n5: Dynamic Wander Demo\n6: Dynamic Flocking Demo\n7: Dynamic Follow Path Demo\n[Pathfinding]\n8: Pathfinding Dijkstra Demo\n9: Pathfinding AStar Demo";
 
 		enum DemoSelector
 		{
@@ -26,8 +27,9 @@ class ofApp : public ofBaseApp{
 			kDynamicFaceDemo = 4,
 			kDynamicWanderDemo = 5,
 			kDynamicFlockingDemo = 6,
-			kPathfindingDijkstraDemo = 7,
-			kPathfindingAStarDemo = 8,
+			kDynamicFollowPathDemo = 7,
+			kPathfindingDijkstraDemo = 8,
+			kPathfindingAStarDemo = 9,
 		};
 
 		bool demo_selected_ = false;
@@ -41,6 +43,7 @@ class ofApp : public ofBaseApp{
 		DynamicFaceDemo* dynamic_face_demo_;
 		DynamicWanderDemo* dynamic_wander_demo_;
 		DynamicFlockingDemo* dynamic_flocking_demo_;
+		DynamicFollowPathDemo* dynamic_follow_path_demo_;
 		PathfindingDijkstraDemo* pathfinding_dijkstra_demo_;
 		PathfindingAStarDemo* pathfinding_astar_demo_;
 

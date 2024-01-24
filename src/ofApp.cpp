@@ -37,6 +37,11 @@ void ofApp::CleanUp()
 		delete dynamic_flocking_demo_;
 		dynamic_flocking_demo_ = nullptr;
 		break;
+	case kDynamicFollowPathDemo:
+		dynamic_follow_path_demo_->Exit();
+		delete dynamic_follow_path_demo_;
+		dynamic_follow_path_demo_ = nullptr;
+		break;
 	case kPathfindingDijkstraDemo:
 		pathfinding_dijkstra_demo_->Exit();
 		delete pathfinding_dijkstra_demo_;
@@ -92,6 +97,9 @@ void ofApp::update(){
 		case kDynamicFlockingDemo:
 			dynamic_flocking_demo_->Update();
 			break;
+		case kDynamicFollowPathDemo:
+			dynamic_follow_path_demo_->Update();
+			break;
 		case kPathfindingDijkstraDemo:
 			pathfinding_dijkstra_demo_->Update();
 			break;
@@ -129,6 +137,9 @@ void ofApp::draw(){
 		break;
 	case kDynamicFlockingDemo:
 		dynamic_flocking_demo_->Draw();
+		break;
+	case kDynamicFollowPathDemo:
+		dynamic_follow_path_demo_->Draw();
 		break;
 	case kPathfindingDijkstraDemo:
 		pathfinding_dijkstra_demo_->Draw();
@@ -197,11 +208,18 @@ void ofApp::keyPressed(int key){
 		if (key == '7')
 		{
 			demo_selected_ = true;
+			demo_selection_ = kDynamicFollowPathDemo;
+			dynamic_follow_path_demo_ = new DynamicFollowPathDemo();
+			dynamic_follow_path_demo_->Setup();
+		}
+		if (key == '8')
+		{
+			demo_selected_ = true;
 			demo_selection_ = kPathfindingDijkstraDemo;
 			pathfinding_dijkstra_demo_ = new PathfindingDijkstraDemo();
 			pathfinding_dijkstra_demo_->Setup();
 		}
-		if (key == '8')
+		if (key == '9')
 		{
 			demo_selected_ = true;
 			demo_selection_ = kPathfindingAStarDemo;
@@ -230,6 +248,9 @@ void ofApp::keyPressed(int key){
 			case ofApp::kDynamicWanderDemo:
 				break;
 			case ofApp::kDynamicFlockingDemo:
+				break;
+			case ofApp::kDynamicFollowPathDemo:
+				dynamic_follow_path_demo_->process_ = DynamicFollowPathDemo::kSetBoid;
 				break;
 			case ofApp::kPathfindingDijkstraDemo:
 				pathfinding_dijkstra_demo_->process_ = PathfindingDijkstraDemo::kSetObstacles;
@@ -272,6 +293,9 @@ void ofApp::keyPressed(int key){
 			break;
 		case ofApp::kDynamicFlockingDemo:
 			break;
+		case ofApp::kDynamicFollowPathDemo:
+			dynamic_follow_path_demo_->keyPressed(key);
+			break;
 		case ofApp::kPathfindingDijkstraDemo:
 			pathfinding_dijkstra_demo_->keyPressed(key);
 			break;
@@ -286,7 +310,34 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+	if (demo_selected_ && begin_move_)
+	{
+		switch (demo_selection_)
+		{
+		case ofApp::kNoneDemo:
+			break;
+		case ofApp::kKinematicArriveDemo:
+			break;
+		case ofApp::kDynamicArriveVSSeekDemo:
+			break;
+		case ofApp::kDynamicPursueVSSeekDemo:
+			break;
+		case ofApp::kDynamicFaceDemo:
+			break;
+		case ofApp::kDynamicWanderDemo:
+			break;
+		case ofApp::kDynamicFlockingDemo:
+			break;
+		case ofApp::kDynamicFollowPathDemo:
+			break;
+		case ofApp::kPathfindingDijkstraDemo:
+			break;
+		case ofApp::kPathfindingAStarDemo:
+			break;
+		default:
+			break;
+		}
+	}
 }
 
 //--------------------------------------------------------------
@@ -319,6 +370,9 @@ void ofApp::mousePressed(int x, int y, int button){
 			break;
 		case ofApp::kDynamicFlockingDemo:
 			break;
+		case ofApp::kDynamicFollowPathDemo:
+			dynamic_follow_path_demo_->mousePressed(x, y, button);
+			break;
 		case ofApp::kPathfindingDijkstraDemo:
 			pathfinding_dijkstra_demo_->mousePressed(x, y, button);
 			break;
@@ -333,7 +387,35 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+	if (demo_selected_ && begin_move_)
+	{
+		switch (demo_selection_)
+		{
+		case ofApp::kNoneDemo:
+			break;
+		case ofApp::kKinematicArriveDemo:
+			break;
+		case ofApp::kDynamicArriveVSSeekDemo:
+			break;
+		case ofApp::kDynamicPursueVSSeekDemo:
+			break;
+		case ofApp::kDynamicFaceDemo:
+			break;
+		case ofApp::kDynamicWanderDemo:
+			break;
+		case ofApp::kDynamicFollowPathDemo:
+			dynamic_follow_path_demo_->mouseReleased(x, y, button);
+			break;
+		case ofApp::kDynamicFlockingDemo:
+			break;
+		case ofApp::kPathfindingDijkstraDemo:
+			break;
+		case ofApp::kPathfindingAStarDemo:
+			break;
+		default:
+			break;
+		}
+	}
 }
 
 //--------------------------------------------------------------

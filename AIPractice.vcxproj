@@ -195,6 +195,8 @@
     <ClCompile Include="src\DynamicFaceDemo.cpp" />
     <ClCompile Include="src\DynamicFlocking.cpp" />
     <ClCompile Include="src\DynamicFlockingDemo.cpp" />
+    <ClCompile Include="src\DynamicFollowPath.cpp" />
+    <ClCompile Include="src\DynamicFollowPathDemo.cpp" />
     <ClCompile Include="src\DynamicLookWhereYoureGoing.cpp" />
     <ClCompile Include="src\DynamicObstacleAvoidance.cpp" />
     <ClCompile Include="src\DynamicPursue.cpp" />
@@ -211,6 +213,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\Path.cpp" />
     <ClCompile Include="src\PathfindingAStarDemo.cpp" />
     <ClCompile Include="src\PathfindingClosedList.cpp" />
     <ClCompile Include="src\PathfindingDijkstraDemo.cpp" />
@@ -236,6 +239,8 @@
     <ClInclude Include="src\DynamicFaceDemo.h" />
     <ClInclude Include="src\DynamicFlocking.h" />
     <ClInclude Include="src\DynamicFlockingDemo.h" />
+    <ClInclude Include="src\DynamicFollowPath.h" />
+    <ClInclude Include="src\DynamicFollowPathDemo.h" />
     <ClInclude Include="src\DynamicLookWhereYoureGoing.h" />
     <ClInclude Include="src\DynamicObstacleAvoidance.h" />
     <ClInclude Include="src\DynamicPursue.h" />
@@ -254,6 +259,7 @@
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\NodeRecord.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\Path.h" />
     <ClInclude Include="src\PathfindingAStarDemo.h" />
     <ClInclude Include="src\PathfindingClosedList.h" />
     <ClInclude Include="src\PathfindingDijkstraDemo.h" />
