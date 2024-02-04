@@ -127,6 +127,105 @@
     <ClCompile Include="src\Path.cpp">
       <Filter>src\Utils\source</Filter>
     </ClCompile>
+    <ClCompile Include="src\Selector.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sequence.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Decorator.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Task.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Parallel.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inverter.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CustomTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UntilFail.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CustomTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Blackboard.cpp">
+      <Filter>src\DecisionMaking\Blackboard\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wait.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BehaviorTree.cpp">
+      <Filter>src\DecisionMaking\BehaviorTree\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TestDemo.cpp">
+      <Filter>src\Demos\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BTTest.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BBTest.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CheckValueTest.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IncrementTest.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LogValueTest.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LogString.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\test\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DetectTrash.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DetectSufficientPower.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SetNearestTrashAsTarget.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KinematicStop.cpp">
+      <Filter>src\Movement\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MoveToTarget.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TidyTrash.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Recharge.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SetNearestChargingStationAsTarget.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DetectFullPower.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BehaviorTreeDemo.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BlackboardJR.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChargingStation.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InteractableObject.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Trash.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BehaviorTreeJR.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wander.cpp">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -167,6 +266,90 @@
     </Filter>
     <Filter Include="src\Utils\source">
       <UniqueIdentifier>{3e49d000-f219-4ff2-865c-4723329c5c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking">
+      <UniqueIdentifier>{1106b6a0-afc9-464f-b559-ba269cc92c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree">
+      <UniqueIdentifier>{82461202-1850-4bf1-8b32-f6fdf0a30383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CustomTasks">
+      <UniqueIdentifier>{42d74c1b-4348-4e68-a4fe-913b6faf1b5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CustomTasks\header">
+      <UniqueIdentifier>{a71a65a3-8a60-498f-b009-0358318c60d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CustomTasks\source">
+      <UniqueIdentifier>{da4054c8-ddc2-448f-ba9b-65cc3a0e6be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CommonTasks">
+      <UniqueIdentifier>{5a123261-a946-40e7-aecc-575abf41612c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CommonTasks\header">
+      <UniqueIdentifier>{2fca5553-268f-4131-86af-5c369d0a78e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\CommonTasks\source">
+      <UniqueIdentifier>{fc30b334-b387-48aa-a947-be49eff3dc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\Blackboard">
+      <UniqueIdentifier>{ea236111-89d2-417c-8bad-1fe50101daf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\Blackboard\header">
+      <UniqueIdentifier>{be669922-e5cc-45e0-9216-2e35008f2042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\Blackboard\source">
+      <UniqueIdentifier>{007b6267-d85c-4081-b99d-641dc0e4056f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo">
+      <UniqueIdentifier>{a61b6993-4622-47e9-8fb5-96e9d24c529f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\header">
+      <UniqueIdentifier>{a89f643d-4603-4e17-870a-396710d4d7df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\source">
+      <UniqueIdentifier>{c6832c1f-0671-417a-820b-b18c9547869c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\header">
+      <UniqueIdentifier>{9feab623-1e8e-42b5-889b-0c49aee9e3c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DecisionMaking\BehaviorTree\source">
+      <UniqueIdentifier>{78cba20c-c32d-4e24-b8c2-541d78a4f13f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\test">
+      <UniqueIdentifier>{3fa90c3f-f319-4feb-8cfa-e68ad52334d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\test\header">
+      <UniqueIdentifier>{a64134e7-8149-46b5-966f-ba04340a2b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\test\source">
+      <UniqueIdentifier>{3e0bf14b-2f4d-4dca-9000-03c104998f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree">
+      <UniqueIdentifier>{38092154-39ce-4f63-8cf7-10cd420b08c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks">
+      <UniqueIdentifier>{c5726504-33ba-4b4d-a92a-6e0a8338cb10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header">
+      <UniqueIdentifier>{526f84c7-22fb-420d-8a66-a514c4fa6d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\source">
+      <UniqueIdentifier>{ef9f74ed-993e-4bba-ad03-5eee836aa3bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree\header">
+      <UniqueIdentifier>{c092dd71-329c-4625-b5f4-bdcc91080080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\BehaviorTree\source">
+      <UniqueIdentifier>{e0a19b62-64a7-4ef2-9a11-433c428904d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\GameplayObjects">
+      <UniqueIdentifier>{a0f6ea53-4667-4b02-b2ca-e0e8706cff3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\GameplayObjects\header">
+      <UniqueIdentifier>{9764d7e6-1f06-416f-a3f5-b3f561d3c20a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Demos\BehaviorTreeDemo\GameplayObjects\source">
+      <UniqueIdentifier>{bc2b42a7-c841-4192-85db-051322ec9a38}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +484,105 @@
     </ClInclude>
     <ClInclude Include="src\Path.h">
       <Filter>src\Utils\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Task.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Selector.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sequence.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Decorator.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Parallel.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UntilFail.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CustomTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Inverter.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CustomTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Blackboard.h">
+      <Filter>src\DecisionMaking\Blackboard\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wait.h">
+      <Filter>src\DecisionMaking\BehaviorTree\CommonTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BehaviorTree.h">
+      <Filter>src\DecisionMaking\BehaviorTree\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TestDemo.h">
+      <Filter>src\Demos\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BTTest.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BBTest.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CheckValueTest.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IncrementTest.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LogValueTest.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LogString.h">
+      <Filter>src\Demos\BehaviorTreeDemo\test\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DetectTrash.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DetectSufficientPower.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SetNearestTrashAsTarget.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KinematicStop.h">
+      <Filter>src\Movement\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MoveToTarget.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TidyTrash.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Recharge.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SetNearestChargingStationAsTarget.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DetectFullPower.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BehaviorTreeDemo.h">
+      <Filter>src\Demos\BehaviorTreeDemo\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BlackboardJR.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChargingStation.h">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InteractableObject.h">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Trash.h">
+      <Filter>src\Demos\BehaviorTreeDemo\GameplayObjects\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BehaviorTreeJR.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wander.h">
+      <Filter>src\Demos\BehaviorTreeDemo\BehaviorTree\GameplayTasks\header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

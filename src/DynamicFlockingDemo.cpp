@@ -1,7 +1,7 @@
 #include "DynamicFlockingDemo.h"
 
 DynamicFlockingDemo::DynamicFlockingDemo() :
-	character_leader_boid_(nullptr), dynamic_wander_(nullptr)
+	character_leader_boid_(nullptr), dynamic_wander_(nullptr), collision_detector_(nullptr), dynamic_obstacle_avoidance_leader_(nullptr)
 {
 }
 
@@ -62,8 +62,6 @@ void DynamicFlockingDemo::Setup()
 		dynamic_obstacle_avoidance_followers_.push_back(new DynamicObstacleAvoidance());
 		dynamic_obstacle_avoidance_followers_.back()->NewRequest(character_follower_boid->rigidbody_, collision_detector_, 512.0f, 128.0f, 4096.0f);
 	}
-
-
 }
 
 void DynamicFlockingDemo::Update()

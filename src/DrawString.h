@@ -23,6 +23,7 @@ public:
 	};
 
 	static void Draw(const string& text, glm::vec2 position, HorizontalAlign horizontal, VerticalAlign vertical, ofColor color);
+	static int GetFontSize();
 
 private:
 	ofTrueTypeFont font_;

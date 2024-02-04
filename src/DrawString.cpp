@@ -47,3 +47,8 @@ void DrawString::Draw(const string& text, glm::vec2 position, HorizontalAlign ho
 	GetInstance().font_.drawString(text, position.x, position.y + static_cast<float>(GetInstance().size_));
 	ofPopMatrix();
 }
+
+int DrawString::GetFontSize()
+{
+	return GetInstance().size_;
+}

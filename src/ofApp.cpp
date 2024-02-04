@@ -5,6 +5,11 @@ void ofApp::CleanUp()
 {
 	switch (demo_selection_)
 	{
+	case kTestDemo:
+		test_demo_->Exit();
+		delete test_demo_;
+		test_demo_ = nullptr;
+		break;
 	case kNoneDemo:
 		break;
 	case kKinematicArriveDemo:
@@ -52,6 +57,11 @@ void ofApp::CleanUp()
 		delete pathfinding_astar_demo_;
 		pathfinding_astar_demo_ = nullptr;
 		break;
+	case kBehaviorTreeDemo:
+		behavior_tree_demo_->Exit();
+		delete behavior_tree_demo_;
+		behavior_tree_demo_ = nullptr;
+		break;
 	default:
 		break;
 	}
@@ -77,6 +87,9 @@ void ofApp::update(){
 	{
 		switch (demo_selection_)
 		{
+		case kTestDemo:
+			test_demo_->Update();
+			break;
 		case kNoneDemo:
 			break;
 		case kKinematicArriveDemo:
@@ -106,6 +119,9 @@ void ofApp::update(){
 		case kPathfindingAStarDemo:
 			pathfinding_astar_demo_->Update();
 			break;
+		case kBehaviorTreeDemo:
+			behavior_tree_demo_->Update();
+			break;
 		default:
 			break;
 		}
@@ -118,6 +134,9 @@ void ofApp::draw(){
 	
 	switch (demo_selection_)
 	{
+	case kTestDemo:
+		test_demo_->Draw();
+		break;
 	case kNoneDemo:
 		break;
 	case kKinematicArriveDemo:
@@ -147,6 +166,9 @@ void ofApp::draw(){
 	case kPathfindingAStarDemo:
 		pathfinding_astar_demo_->Draw();
 		break;
+	case kBehaviorTreeDemo:
+		behavior_tree_demo_->Draw();
+		break;
 	default:
 		break;
 	}
@@ -163,6 +185,13 @@ void ofApp::exit() {
 void ofApp::keyPressed(int key){
 	if (!demo_selected_)
 	{
+		if (key == 'T' || key == 't')
+		{
+			demo_selected_ = true;
+			demo_selection_ = kTestDemo;
+			test_demo_ = new TestDemo();
+			test_demo_->Setup();
+		}
 		if (key == '1')
 		{
 			demo_selected_ = true;
@@ -226,6 +255,13 @@ void ofApp::keyPressed(int key){
 			pathfinding_astar_demo_ = new PathfindingAStarDemo();
 			pathfinding_astar_demo_->Setup();
 		}
+		if (key == '0')
+		{
+			demo_selected_ = true;
+			demo_selection_ = kBehaviorTreeDemo;
+			behavior_tree_demo_ = new BehaviorTreeDemo();
+			behavior_tree_demo_->Setup();
+		}
 	}
 	if (demo_selected_ && !begin_move_)
 	{
@@ -258,6 +294,9 @@ void ofApp::keyPressed(int key){
 			case ofApp::kPathfindingAStarDemo:
 				pathfinding_astar_demo_->process_ = PathfindingAStarDemo::kSetObstacles;
 				break;
+			case ofApp::kBehaviorTreeDemo:
+				behavior_tree_demo_->process_ = BehaviorTreeDemo::kSetChargingStations;
+				break;
 			default:
 				break;
 			}
@@ -268,10 +307,10 @@ void ofApp::keyPressed(int key){
 	{
 		if (key == 'q' || key == 'Q')
 		{
-			demo_selection_ = kNoneDemo;
-			demo_selected_ = false;
 			begin_move_ = false;
 			CleanUp();
+			demo_selection_ = kNoneDemo;
+			demo_selected_ = false;
 		}
 	}
 
@@ -279,29 +318,33 @@ void ofApp::keyPressed(int key){
 	{
 		switch (demo_selection_)
 		{
-		case ofApp::kNoneDemo:
+		case kTestDemo:
+			test_demo_->keyPressed(key);
+		case kNoneDemo:
 			break;
-		case ofApp::kKinematicArriveDemo:
+		case kKinematicArriveDemo:
 			break;
-		case ofApp::kDynamicArriveVSSeekDemo:
+		case kDynamicArriveVSSeekDemo:
 			break;
-		case ofApp::kDynamicPursueVSSeekDemo:
+		case kDynamicPursueVSSeekDemo:
 			break;
-		case ofApp::kDynamicFaceDemo:
+		case kDynamicFaceDemo:
 			break;
-		case ofApp::kDynamicWanderDemo:
+		case kDynamicWanderDemo:
 			break;
-		case ofApp::kDynamicFlockingDemo:
+		case kDynamicFlockingDemo:
 			break;
-		case ofApp::kDynamicFollowPathDemo:
+		case kDynamicFollowPathDemo:
 			dynamic_follow_path_demo_->keyPressed(key);
 			break;
-		case ofApp::kPathfindingDijkstraDemo:
+		case kPathfindingDijkstraDemo:
 			pathfinding_dijkstra_demo_->keyPressed(key);
 			break;
-		case ofApp::kPathfindingAStarDemo:
+		case kPathfindingAStarDemo:
 			pathfinding_astar_demo_->keyPressed(key);
 			break;
+		case kBehaviorTreeDemo:
+			behavior_tree_demo_->keyPressed(key);
 		default:
 			break;
 		}
@@ -333,6 +376,8 @@ void ofApp::keyReleased(int key){
 		case ofApp::kPathfindingDijkstraDemo:
 			break;
 		case ofApp::kPathfindingAStarDemo:
+			break;
+		case ofApp::kBehaviorTreeDemo:
 			break;
 		default:
 			break;
@@ -379,6 +424,9 @@ void ofApp::mousePressed(int x, int y, int button){
 		case ofApp::kPathfindingAStarDemo:
 			pathfinding_astar_demo_->mousePressed(x, y, button);
 			break;
+		case ofApp::kBehaviorTreeDemo:
+			behavior_tree_demo_->mousePressed(x, y, button);
+			break;
 		default:
 			break;
 		}
@@ -411,6 +459,9 @@ void ofApp::mouseReleased(int x, int y, int button){
 		case ofApp::kPathfindingDijkstraDemo:
 			break;
 		case ofApp::kPathfindingAStarDemo:
+			break;
+		case ofApp::kBehaviorTreeDemo:
+			behavior_tree_demo_->mouseReleased(x, y, button);
 			break;
 		default:
 			break;

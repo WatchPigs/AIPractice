@@ -19,6 +19,11 @@ bool ofThread::isThreadRunning() const{
     return threadRunning;
 }
 
+
+bool ofThread::isThreadDone() const{
+	return threadDone;
+}
+
 //-------------------------------------------------
 std::thread::id ofThread::getThreadId() const{
 	return thread.get_id();

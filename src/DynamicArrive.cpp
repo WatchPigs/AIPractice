@@ -1,7 +1,7 @@
 #include "DynamicArrive.h"
 
 DynamicArrive::DynamicArrive() :
-	character_rb_(nullptr), target_rb_(nullptr), max_acceleration_(0.0f), max_speed_(0.0f), target_radius_(0.0f), slow_radius_(0.0f), time_to_target_(0.0f), arrived_(true)
+	character_rb_(nullptr), target_rb_(nullptr), max_acceleration_(0.0f), max_speed_(0.0f), target_radius_(0.0f), slow_radius_(0.0f), time_to_target_(0.0f), arrived_speed_(-1.0f), arrived_(true)
 {
 }
 
@@ -9,7 +9,7 @@ DynamicArrive::~DynamicArrive()
 {
 }
 
-void DynamicArrive::NewRequest(Rigidbody* character, Rigidbody* target, float max_acceleration, float max_speed, float target_radius, float slow_radius, float time_to_target)
+void DynamicArrive::NewRequest(Rigidbody* character, Rigidbody* target, float max_acceleration, float max_speed, float target_radius, float slow_radius, float time_to_target, float arrived_speed)
 {
 	character_rb_ = character;
 	target_rb_ = target;
@@ -18,6 +18,7 @@ void DynamicArrive::NewRequest(Rigidbody* character, Rigidbody* target, float ma
 	target_radius_ = target_radius;
 	slow_radius_ = slow_radius;
 	time_to_target_ = time_to_target;
+	arrived_speed_ = arrived_speed;
 	arrived_ = false;
 }
 
@@ -34,6 +35,7 @@ DynamicSteeringOutput DynamicArrive::GetSteering()
 	{
 		result.linear = glm::vec2(0.0f, 0.0f);
 		result.angular = 0.0f;
+		if (glm::length(character_rb_->velocity_) <= arrived_speed_) arrived_ = true;
 		return result;
 	}
 

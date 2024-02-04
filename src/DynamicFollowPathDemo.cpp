@@ -214,7 +214,7 @@ void DynamicFollowPathDemo::mousePressed(int x, int y, int button)
 
 void DynamicFollowPathDemo::mouseReleased(int x, int y, int button)
 {
-	if (button == 0)
+	if (button == 0 && mouse_clicked)
 	{
 		mouse_clicked = false;
 	}

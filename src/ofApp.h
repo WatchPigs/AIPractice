@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include <string>
+#include "TestDemo.h"
 #include "KinematicArriveDemo.h"
 #include "DynamicArriveVSSeekDemo.h"
 #include "DynamicPursueVSSeekDemo.h"
@@ -11,15 +12,17 @@
 #include "DynamicFollowPathDemo.h"
 #include "PathfindingDijkstraDemo.h"
 #include "PathfindingAStarDemo.h"
+#include "BehaviorTreeDemo.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
 
-		string main_menu_string_ = "Press numbers to choose:\n[Physics & Movement & Steering Behaviors]\n1: Kinematic Arrive Demo\n2: Dynamic Arrive VS Seek Demo\n3: Dynamic Pursue VS Seek Demo\n4: Dynamic Face Demo\n5: Dynamic Wander Demo\n6: Dynamic Flocking Demo\n7: Dynamic Follow Path Demo\n[Pathfinding]\n8: Pathfinding Dijkstra Demo\n9: Pathfinding AStar Demo";
+		string main_menu_string_ = "Press number keys to choose:\n\n[Physics & Movement & Steering Behaviors]\n1: Kinematic Arrive Demo\n2: Dynamic Arrive VS Seek Demo\n3: Dynamic Pursue VS Seek Demo\n4: Dynamic Face Demo\n5: Dynamic Wander Demo\n6: Dynamic Flocking Demo\n7: Dynamic Follow Path Demo\n\n[Pathfinding]\n8: Pathfinding Dijkstra Demo\n9: Pathfinding AStar Demo\n\n[Decision Making]\n0: Behavior Tree Demo (Janitor Robot)";
 
 		enum DemoSelector
 		{
+			kTestDemo = -1,
 			kNoneDemo = 0,
 			kKinematicArriveDemo = 1,
 			kDynamicArriveVSSeekDemo = 2,
@@ -30,6 +33,7 @@ class ofApp : public ofBaseApp{
 			kDynamicFollowPathDemo = 7,
 			kPathfindingDijkstraDemo = 8,
 			kPathfindingAStarDemo = 9,
+			kBehaviorTreeDemo = 10,
 		};
 
 		bool demo_selected_ = false;
@@ -37,6 +41,7 @@ class ofApp : public ofBaseApp{
 		
 		bool begin_move_ = false;
 
+		TestDemo* test_demo_;
 		KinematicArriveDemo* kinematic_arrive_demo_;
 		DynamicArriveVSSeekDemo* dynamic_arrive_vs_seek_demo_;
 		DynamicPursueVSSeekkDemo* dynamic_pursue_vs_seek_demo_;
@@ -46,6 +51,7 @@ class ofApp : public ofBaseApp{
 		DynamicFollowPathDemo* dynamic_follow_path_demo_;
 		PathfindingDijkstraDemo* pathfinding_dijkstra_demo_;
 		PathfindingAStarDemo* pathfinding_astar_demo_;
+		BehaviorTreeDemo* behavior_tree_demo_;
 
 
 		void CleanUp();

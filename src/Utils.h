@@ -19,3 +19,5 @@ inline glm::vec2 AsVector(float orientation)
 {
 	return glm::rotate(glm::vec2(1.0f, 0.0f), orientation);
 }
+
+vector<string> split(const string& s, const char& seperator);

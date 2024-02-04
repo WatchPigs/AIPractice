@@ -75,6 +75,8 @@ public:
     /// \returns true iff the thread is currently running.
     bool isThreadRunning() const;
 
+    bool isThreadDone() const;
+
     /// \brief Get the unique thread id.
     /// \note This is NOT the the same as the operating thread id!
     std::thread::id getThreadId() const;

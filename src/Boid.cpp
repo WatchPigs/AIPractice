@@ -12,7 +12,10 @@ Boid::Boid(glm::vec2 position, float orientation, float radius, float length, of
 	rigidbody_ = new Rigidbody(position, orientation, glm::vec2(0.0f, 0.0f), 0.0f, mass);
 }
 
-Boid::~Boid() {}
+Boid::~Boid()
+{
+	delete rigidbody_;
+}
 
 void Boid::Draw(bool draw_bread_crumbs) 
 {

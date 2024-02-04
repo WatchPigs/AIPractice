@@ -54,7 +54,6 @@ void BehaviorTreeDemo::Update()
 			else if (blackboard_jr->get_dynamic_steering_ != nullptr)
 			{
 				DynamicSteeringOutput dynamic_steering_output_behavior_tree = blackboard_jr->GetDynamicSteering();
-				//dynamic_steering_output_behavior_tree.angular = 0.0f;
 				DynamicSteeringOutput dynamic_steering_output_obstacle_avoidance = dynamic_obstacle_avoidance_->GetSteering();
 				DynamicSteeringOutput dynamic_steering_output_look_where_youre_going_ = dynamic_look_where_youre_going_->GetSteering();
 				character_boid_->rigidbody_->update(dynamic_steering_output_behavior_tree + dynamic_steering_output_obstacle_avoidance + dynamic_steering_output_look_where_youre_going_, 128.0f, delta_time);

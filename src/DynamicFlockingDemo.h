@@ -1,7 +1,6 @@
 #pragma once
 #include "ofMain.h"
 #include "Boid.h"
-#include "Rigidbody.h"
 #include "DynamicWander.h"
 #include "DynamicFlocking.h"
 #include "CollisionDetector.h"
